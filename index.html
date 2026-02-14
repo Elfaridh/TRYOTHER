@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D-AMIN Asset Hub</title>
+    <meta
+      name="description"
+      content="Konsep aplikasi Sarpras modern untuk Pesantren Daarul Aminn IBS"
+    />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #0b1020;
+        --card: #151b2f;
+        --text: #e6ecff;
+        --muted: #9fb0d6;
+        --accent: #00b894;
+        --gold: #f4c542;
+      }
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f4f7ff;
+          --card: #ffffff;
+          --text: #1f2a44;
+          --muted: #5b6a89;
+          --accent: #0ea371;
+          --gold: #b8860b;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+        background: radial-gradient(circle at top right, rgba(0,184,148,0.2), transparent 40%), var(--bg);
+        color: var(--text);
+        line-height: 1.55;
+      }
+      .container { width: min(1100px, 92%); margin: 0 auto; }
+      .hero { padding: 64px 0 36px; }
+      .tag {
+        display: inline-block;
+        background: color-mix(in oklab, var(--accent) 20%, transparent);
+        border: 1px solid color-mix(in oklab, var(--accent) 50%, transparent);
+        color: var(--accent);
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: .05em;
+      }
+      h1 { margin: 14px 0 10px; font-size: clamp(30px, 5vw, 52px); line-height: 1.1; }
+      .subtitle { color: var(--muted); max-width: 760px; }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin: 30px 0 50px;
+      }
+      .card {
+        background: color-mix(in oklab, var(--card) 88%, transparent);
+        border: 1px solid color-mix(in oklab, var(--text) 15%, transparent);
+        border-radius: 14px;
+        padding: 18px;
+      }
+      .card h3 { margin: 0 0 8px; font-size: 18px; }
+      .card p { margin: 0; color: var(--muted); font-size: 14px; }
+      .section { padding: 12px 0 34px; }
+      .section h2 { font-size: 24px; margin-bottom: 12px; }
+      ul { margin-top: 10px; }
+      .footer {
+        border-top: 1px solid color-mix(in oklab, var(--text) 12%, transparent);
+        margin-top: 24px;
+        padding: 18px 0 36px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .gold { color: var(--gold); font-weight: 600; }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <span class="tag">PRASARANA DAARUL AMINN</span>
+        <h1>D-AMIN ASSET HUB</h1>
+        <p class="subtitle">
+          <strong>Modern Management for Blessed Facilities</strong> — platform Sarpras
+          yang elegan, modern, dan siap dikembangkan untuk monitoring aset,
+          peminjaman fasilitas, maintenance real-time, serta audit QR code.
+        </p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h3>Dashboard Eksekutif</h3>
+          <p>Grafik aset bangunan dan inventaris untuk keputusan cepat pimpinan.</p>
+        </article>
+        <article class="card">
+          <h3>Peminjaman Fasilitas</h3>
+          <p>Booking ruang/lapangan terintegrasi jadwal pesantren & approval workflow.</p>
+        </article>
+        <article class="card">
+          <h3>Maintenance Tracking</h3>
+          <p>Laporan kerusakan dengan foto dan status perbaikan real-time.</p>
+        </article>
+        <article class="card">
+          <h3>Audit Aset Digital</h3>
+          <p>Scan QR code untuk validasi kondisi dan lokasi aset secara cepat.</p>
+        </article>
+      </section>
+
+      <section class="section card">
+        <h2>Status Deploy</h2>
+        <p>
+          File ini ditambahkan untuk memperbaiki error hosting:
+          <span class="gold">"The site configured at this address does not contain the requested file"</span>.
+          Sekarang root URL memiliki <code>index.html</code> sehingga web server dapat
+          menampilkan halaman default.
+        </p>
+      </section>
+
+      <footer class="footer">
+        © Daarul Aminn IBS — Sarpras Digital Initiative
+      </footer>
+    </main>
+  </body>
+</html>
