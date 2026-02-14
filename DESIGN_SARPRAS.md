@@ -389,3 +389,16 @@ CREATE TABLE monthly_reports (
 - Komponen UI premium: gradient halus, chart animasi subtil.
 - Report template berkop resmi Daarul Aminn IBS.
 - Leaderboard unit ter-rapi/terpatuh maintenance untuk mendorong budaya tertib sarpras.
+
+---
+
+## 11) Kenapa Belum Bisa Deploy (Status Saat Ini)
+
+Dokumen ini bersifat **arsitektur & perencanaan**. Artinya, artefak deployable belum lengkap karena belum ada:
+- Source code backend/frontend yang executable.
+- Dockerfile per service.
+- Pipeline CI/CD.
+- File env production dan secret management.
+- Skrip migrasi yang benar-benar dijalankan pada environment target.
+
+Agar menjadi deployable, gunakan `DEPLOY_CHECKLIST.md` sebagai acuan Definition of Done.
