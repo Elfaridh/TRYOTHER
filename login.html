@@ -1,4 +1,20 @@
 <!doctype html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="css/style.css"><title>Login - Rekap Sarpras</title></head><body>
 <div class="login-wrap"><div class="card login-card"><div class="brand" style="margin-bottom:10px"><img src="assets/logo-daarul-amiin.svg" alt="logo"><span>Daarul Amiin IBS</span></div><h2>Login Rekap Sarpras</h2><p class="muted">Admin: admin/admin123 • Petugas: petugas/petugas123</p><form id="loginForm"><label>Username</label><input id="u" required><label>Password</label><input id="p" type="password" required><button type="submit">Masuk</button></form><p id="err" style="color:#d92d20"></p></div></div>
-<script type="module">import { login } from './js/auth.js'; import { seed } from './js/db.js'; await seed(); loginForm.onsubmit=async(e)=>{e.preventDefault();const ok=await login(u.value,p.value); if(ok) location.href='index.html'; else err.textContent='Login gagal';};</script>
+<script type="module">
+import { login } from './js/auth.js';
+import { seed } from './js/db.js';
+
+await seed();
+const form = document.getElementById('loginForm');
+const u = document.getElementById('u');
+const p = document.getElementById('p');
+const err = document.getElementById('err');
+
+form.onsubmit = async (e) => {
+  e.preventDefault();
+  const ok = await login(u.value, p.value);
+  if (ok) location.href = 'index.html';
+  else err.textContent = 'Login gagal';
+};
+</script>
 </body></html>
