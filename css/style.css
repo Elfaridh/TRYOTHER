@@ -14,3 +14,5 @@ table{width:100%;border-collapse:collapse;font-size:.9rem}th,td{padding:8px;bord
 img.preview{max-width:64px;max-height:64px;border-radius:8px;object-fit:cover}
 .login-wrap{min-height:100vh;display:grid;place-items:center;padding:14px}.login-card{width:min(420px,100%)}
 @media (max-width:640px){.container{padding:10px}.topbar{padding:10px}}
+
+.version-pill{margin-left:auto;font-size:.72rem;background:#eef4ff;color:#344054;border:1px solid #d0d5dd;padding:6px 8px;border-radius:999px;white-space:nowrap}
