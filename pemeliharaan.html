@@ -1,0 +1,6 @@
+<!doctype html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="css/style.css"><title>Pemeliharaan - Rekap Sarpras</title></head><body>
+<header class="topbar"><div id="topbar-brand" class="brand"></div></header><nav id="main-nav" class="nav"></nav>
+<main class="container"><section class="card"><h3>Pemeliharaan & Riwayat Perbaikan</h3><form id="formPem" class="grid grid-2"><div><label>Aset</label><select id="asetRef"></select></div><div><label>Tanggal</label><input type="date" id="tanggalPem" required></div><div style="grid-column:1/-1"><label>Catatan</label><textarea id="catatanPem" required></textarea></div><div class="actions"><button type="submit">Simpan Catatan</button></div></form></section>
+<section class="card"><table><thead><tr><th>Aset</th><th>Tanggal</th><th>Catatan</th></tr></thead><tbody id="pemBody"></tbody></table></section></main>
+<script type="module" src="js/pemeliharaan.js"></script>
+</body></html>

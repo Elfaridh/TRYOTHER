@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Logo Daarul Amiin IBS">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0ea371"/>
+      <stop offset="1" stop-color="#0b6b8e"/>
+    </linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="58" fill="url(#g)"/>
+  <path d="M37 86V42h16l11 17 11-17h16v44H75V67L64 83 53 67v19H37z" fill="#fff"/>
+  <circle cx="64" cy="31" r="8" fill="#ffd166"/>
+</svg>
