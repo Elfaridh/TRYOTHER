@@ -52,20 +52,58 @@ function detectColumns(row) {
 async function importRows(rows) {
   if (!rows.length) return;
   const c = detectColumns(rows[0]);
+  const allAset = await getAll('aset');
+  const allLokasi = await getAll('lokasi');
+  const lokasiByName = new Map(allLokasi.map((l) => [String(l.nama || '').toLowerCase().trim(), l]));
+
+  let insertCount = 0;
+  let updateCount = 0;
+
   for (const r of rows) {
-    await put('aset', {
-      id: uid(),
-      nama: r[c.nama] || 'Tanpa Nama',
-      lokasi: r[c.lokasi] || 'Umum',
-      kategori: (r[c.kategori] || 'mebel').toString().toLowerCase(),
-      kondisi: (r[c.kondisi] || 'baik').toString().toLowerCase(),
-      jumlah: Number(r[c.jumlah] || 1),
-      tahun: r[c.tahun] || '',
-      foto: '',
-    });
+    const nama = (r[c.nama] || 'Tanpa Nama').toString().trim();
+    const lokasi = (r[c.lokasi] || 'Umum').toString().trim();
+    const kategori = (r[c.kategori] || 'mebel').toString().toLowerCase().trim();
+    const kondisi = (r[c.kondisi] || 'baik').toString().toLowerCase().trim();
+    const jumlah = Number(r[c.jumlah] || 1);
+    const tahun = (r[c.tahun] || '').toString().trim();
+
+    if (!lokasiByName.has(lokasi.toLowerCase())) {
+      const newLok = { id: uid(), nama: lokasi, keterangan: 'Auto dari import' };
+      await put('lokasi', newLok);
+      lokasiByName.set(lokasi.toLowerCase(), newLok);
+    }
+
+    const existing = allAset.find(
+      (a) => String(a.nama || '').toLowerCase().trim() === nama.toLowerCase() &&
+             String(a.lokasi || '').toLowerCase().trim() === lokasi.toLowerCase()
+    );
+
+    if (existing) {
+      existing.kategori = kategori || existing.kategori;
+      existing.kondisi = kondisi || existing.kondisi;
+      existing.jumlah = Number.isFinite(jumlah) ? jumlah : existing.jumlah;
+      existing.tahun = tahun || existing.tahun;
+      await put('aset', existing);
+      updateCount += 1;
+    } else {
+      const inserted = {
+        id: uid(),
+        nama,
+        lokasi,
+        kategori,
+        kondisi,
+        jumlah: Number.isFinite(jumlah) ? jumlah : 1,
+        tahun,
+        foto: '',
+      };
+      await put('aset', inserted);
+      allAset.push(inserted);
+      insertCount += 1;
+    }
   }
+
   await render();
-  alert(`Import berhasil: ${rows.length} data`);
+  alert(`Import selesai. Data baru: ${insertCount}, diperbarui: ${updateCount}`);
 }
 
 function edit(id) {
