@@ -1,4 +1,4 @@
-const CACHE = 'sarpras-v3';
+const CACHE = 'sarpras-v4';
 const ASSETS = [
   './',
   './index.html',
@@ -8,6 +8,7 @@ const ASSETS = [
   './pemeliharaan.html',
   './mutasi.html',
   './laporan.html',
+  './settings.html',
   './css/style.css',
   './manifest.json',
   './assets/logo-daarul-amiin.svg',
@@ -20,6 +21,7 @@ const ASSETS = [
   './js/pemeliharaan.js',
   './js/mutasi.js',
   './js/laporan.js',
+  './js/settings.js',
   './js/export.js',
   './data/template-aset.csv',
   './data/template-aset.xls'

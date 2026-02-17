@@ -38,5 +38,5 @@ export async function seed(){
     await put('users',{id:uid(),username:'petugas',password:'petugas123',role:'petugas',nama:'Petugas Sarpras'});
   }
   const settings=await get('settings','institution');
-  if(!settings){await put('settings',{id:'institution',name:'Daarul Amiin IBS',logo:'assets/logo-daarul-amiin.svg'});}
+  if(!settings){await put('settings',{id:'institution',name:'Daarul Amiin IBS',shortName:'DA-IBS',logo:'assets/logo-daarul-amiin.svg',address:'',phone:'',email:'',leader:'',description:'Sistem Rekap Sarpras Pesantren'});}
 }

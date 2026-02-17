@@ -1,0 +1,29 @@
+<!doctype html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="css/style.css"><title>Pengaturan - Rekap Sarpras</title></head><body>
+<header class="topbar"><div id="topbar-brand" class="brand"></div></header><nav id="main-nav" class="nav"></nav>
+<main class="container">
+  <section class="card">
+    <h3>Pengaturan Umum Lembaga</h3>
+    <form id="formSettings" class="grid grid-2">
+      <div><label>Nama Lembaga</label><input id="setName" required></div>
+      <div><label>Nama Singkat</label><input id="setShort"></div>
+      <div><label>Email</label><input id="setEmail" type="email"></div>
+      <div><label>Nomor Kontak</label><input id="setPhone"></div>
+      <div><label>Pimpinan</label><input id="setLeader"></div>
+      <div><label>Alamat</label><input id="setAddress"></div>
+      <div style="grid-column:1/-1"><label>Deskripsi Profil</label><textarea id="setDesc"></textarea></div>
+      <div><label>Logo Lembaga (PNG/JPG/SVG)</label><input type="file" id="setLogo" accept="image/*"></div>
+      <div><label>Preview Logo</label><img id="setLogoPreview" class="preview" style="max-width:120px;max-height:120px"></div>
+      <div class="actions"><button type="submit">Simpan Pengaturan</button></div>
+    </form>
+  </section>
+  <section class="card">
+    <h3>Pengaturan Data</h3>
+    <div class="actions">
+      <button id="btnBackup" class="secondary">Backup Semua Data (JSON)</button>
+      <button id="btnRestore" class="secondary">Restore Data (JSON)</button>
+      <input id="restoreFile" type="file" accept=".json" style="display:none">
+    </div>
+  </section>
+</main>
+<script type="module" src="js/settings.js"></script>
+</body></html>

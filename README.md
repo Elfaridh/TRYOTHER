@@ -19,6 +19,7 @@ Aplikasi web **100% gratis** untuk pencatatan sarana prasarana pesantren, tanpa 
 ├─ pemeliharaan.html
 ├─ mutasi.html
 ├─ laporan.html
+├─ settings.html
 ├─ css/style.css
 ├─ js/
 │  ├─ db.js
@@ -30,6 +31,7 @@ Aplikasi web **100% gratis** untuk pencatatan sarana prasarana pesantren, tanpa 
 │  ├─ pemeliharaan.js
 │  ├─ mutasi.js
 │  ├─ laporan.js
+│  ├─ settings.js
 │  └─ export.js
 ├─ assets/logo-daarul-amiin.svg
 ├─ data/template-aset.csv
@@ -48,7 +50,9 @@ Aplikasi web **100% gratis** untuk pencatatan sarana prasarana pesantren, tanpa 
 7. Implement mutasi aset antar lokasi (`js/mutasi.js`).
 8. Implement dashboard KPI ringkas (`js/dashboard.js`).
 9. Implement ekspor data CSV/XLSX dan laporan (`js/export.js`, `js/laporan.js`).
-10. Tambahkan `manifest.json` dan `service-worker.js`.
+10. Tambahkan dashboard visual kondisi (persentase donut + bar).
+11. Tambahkan halaman pengaturan lembaga (nama, profil, logo, backup/restore).
+12. Tambahkan `manifest.json` dan `service-worker.js`.
 11. Deploy ke GitHub Pages (branch `main`/`work`, folder root).
 
 ## Logo & Identitas Lembaga
