@@ -1,0 +1,13 @@
+<!doctype html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="css/style.css"><title>Aset - Rekap Sarpras</title></head><body>
+<header class="topbar"><div id="topbar-brand" class="brand"></div></header><nav id="main-nav" class="nav"></nav>
+<main class="container"><section class="card"><h3>Inventaris Aset</h3><form id="formAset" class="grid grid-2">
+<div><label>Nama Aset</label><input id="namaAset" required></div><div><label>Lokasi</label><select id="lokasiAset"></select></div>
+<div><label>Kategori</label><select id="kategoriAset"></select></div><div><label>Kondisi</label><select id="kondisiAset"><option value="baik">baik</option><option value="rusak">rusak</option><option value="rusak berat">rusak berat</option></select></div>
+<div><label>Jumlah</label><input type="number" id="jumlahAset" min="0" required></div><div><label>Tahun Perolehan</label><input type="number" id="tahunAset"></div>
+<div><label>Foto</label><input type="file" id="fotoAset" accept="image/*"></div><div><img id="preview" class="preview"></div>
+<div class="actions"><button type="submit">Simpan Aset</button></div></form></section>
+<section class="card"><div class="grid grid-2"><div><label>Pencarian Cepat</label><input id="cari" placeholder="nama/lokasi/kategori/kondisi"></div><div><label>Upload Data (CSV/JSON/XLSX)</label><input type="file" id="importFile" accept=".csv,.json,.xlsx,.xls"></div></div></section>
+<section class="card"><table><thead><tr><th>Nama</th><th>Lokasi</th><th>Kategori</th><th>Kondisi</th><th>Jumlah</th><th>Tahun</th><th>Foto</th><th>Aksi</th></tr></thead><tbody id="asetBody"></tbody></table></section></main>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+<script type="module" src="js/aset.js"></script>
+</body></html>

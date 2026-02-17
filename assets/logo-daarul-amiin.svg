@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-label="Logo DA-IBS">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#2f5fa9"/>
+      <stop offset="1" stop-color="#123a7a"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#f3ca57"/>
+      <stop offset="1" stop-color="#c9971a"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(210,110)">
+    <g stroke="#d6b34a" stroke-width="4" stroke-linecap="round" opacity=".8">
+      <line x1="0" y1="-90" x2="0" y2="-130"/>
+      <line x1="-18" y1="-88" x2="-32" y2="-124"/>
+      <line x1="18" y1="-88" x2="32" y2="-124"/>
+      <line x1="-36" y1="-82" x2="-62" y2="-116"/>
+      <line x1="36" y1="-82" x2="62" y2="-116"/>
+      <line x1="-54" y1="-72" x2="-92" y2="-96"/>
+      <line x1="54" y1="-72" x2="92" y2="-96"/>
+    </g>
+    <path d="M-76 34C-70-24-38-64 0-64s70 40 76 98H-76z" fill="url(#g1)"/>
+    <circle cx="20" cy="-24" r="24" fill="#fff" opacity=".95"/>
+    <circle cx="29" cy="-24" r="19" fill="url(#g1)"/>
+    <circle cx="22" cy="-28" r="5" fill="#fff"/>
+    <path d="M-118 82c42-10 78-14 118-14s76 4 118 14l-18 23c-32-8-66-11-100-11s-68 3-100 11z" fill="url(#g1)"/>
+    <path d="M-98 110c36-6 64-9 98-9s62 3 98 9l-12 14c-28-5-57-7-86-7s-58 2-86 7z" fill="url(#g2)"/>
+  </g>
+  <text x="74" y="332" font-family="Georgia,serif" font-size="88" font-weight="700" fill="url(#g1)">DA-</text>
+  <text x="242" y="332" font-family="Georgia,serif" font-size="88" font-weight="700" fill="url(#g2)">IBS</text>
+</svg>
